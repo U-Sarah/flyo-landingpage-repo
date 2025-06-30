@@ -1,9 +1,11 @@
 body {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
   font-weight: 700;
+  padding: 0px;
+  overflow-x: hidden;
 }
+
 .first-container {
   padding: 35px;
   font-family: "Raleway", sans-serif;
@@ -18,27 +20,30 @@ body {
 }
 a {
   text-decoration: none;
-  color: hsl(0, 0%, 75%);
+  color: hsl(243, 87%, 12%);
   font-family: "Open Sans", sans-serif;
 }
 .links {
   display: flex;
   gap: 35px;
 }
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  align-items: center;
+}
 .main img {
-  float: right;
   height: 400px;
   width: 500px;
-  margin-top: -150px;
 }
 .text {
   width: 500px;
-  margin-top: 200px;
 }
 p {
   font-size: 15px;
   font-weight: 400;
-  color: hsl(0, 0%, 75%);
+  color: hsl(243, 87%, 12%);
   font-family: "Open Sans", sans-serif;
 }
 input {
@@ -54,38 +59,45 @@ button {
   background-color: hsl(224, 93%, 58%);
 }
 .second-container {
+  display: flex;
+  justify-content: space-between;
   padding: 35px;
   background-color: hsl(240, 75%, 98%);
   margin-top: 130px;
 }
-.text-1 {
-  width: 520px;
+.paragraph {
+  width: 500px;
 }
-.main-2 img {
-  float: right;
-  height: 250px;
-  /* margin-top: 60px; */
+.people {
+  height: 350px;
+  width: 400px;
 }
+
 .arrow {
   display: flex;
   gap: 5px;
+  color: hsl(170, 45%, 43%);
+  font-size: 14px;
 }
 
 .arrow img {
-  height: 18px;
+  height: 25px;
 }
 .box {
   background-color: white;
-  border: 1px solid black;
   width: 350px;
   border-radius: 5px;
-  border: none;
   padding: 15px;
   box-shadow: 1px 1px 25px grey;
   margin-top: 20px;
 }
-.box img {
-  height: 30px;
+.quote {
+  height: 20px;
+}
+.review {
+  width: 330px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .avatar {
   display: flex;
@@ -97,12 +109,22 @@ button {
 }
 .third-container {
   display: flex;
-  gap: 350px;
+  /* gap: 400px; */
+  justify-content: space-between;
   padding: 70px;
   background-color: hsl(238, 22%, 44%);
 }
+h2 {
+  color: white;
+}
+.text-1 {
+  width: 480px;
+}
 .free {
   margin-top: 25px;
+}
+.free input {
+  width: 500px;
 }
 .fourth-container {
   display: flex;
@@ -117,10 +139,125 @@ button {
   display: flex;
   gap: 15px;
 }
+.phone p {
+  color: white;
+}
 .phone img {
   height: 20px;
   margin-top: 15px;
 }
 .footer {
   margin-top: 70px;
+}
+.footer p {
+  color: white;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+    font-weight: 200;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  .navbar {
+    display: flex;
+    gap: 6px;
+  }
+  .navbar img {
+    height: 30px;
+  }
+  .links {
+    gap: 10px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .main img {
+    height: 250px;
+    width: 300px;
+  }
+  .text {
+    width: 380px;
+  }
+  input {
+    width: 330px;
+  }
+  button {
+    width: 350px;
+    margin-top: 10px;
+  }
+  .second-container {
+    padding: 0px;
+    margin-top: 8px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .second-h1 {
+    font-size: 14px;
+    text-align: center;
+  }
+  .paragraph {
+    width: 380px;
+    text-align: center;
+  }
+  .arrow {
+    align-items: center;
+    justify-content: center;
+    color: hsl(170, 45%, 43%);
+  }
+  .arrow img {
+    height: 20px;
+    width: 20px;
+  }
+  .box {
+    width: 280px;
+    margin-top: 30px;
+    box-shadow: 3px 3px 8px grey;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .review {
+    width: 280px;
+    font-size: 12px;
+    text-align: start;
+  }
+
+  .third-container {
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    width: 400px;
+  }
+  .text-1 {
+    width: 300px;
+  }
+  .free {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .free input {
+    width: 280px;
+  }
+  .free button {
+    width: 300px;
+  }
+  .fourth-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+  }
+  .footer {
+    margin-top: 20px;
+  }
 }
